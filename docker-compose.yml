@@ -35,11 +35,14 @@ services:
     volumes:
       - ./grafana/provisioning/:/etc/grafana/provisioning/
       - ./grafana/dashboards/:/var/lib/grafana/dashboards
+      - ./grafana/images/:/usr/share/grafana/public/images
     ports:
       - "3000:3000"
     environment:
       - GF_SERVER_ROOT_URL=http://localhost:3000/
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,natel-plotly-panel,fatcloud-windrose-panel, yesoreyeram-boomtheme-panel, briangann-gauge-panel, grafana-influxdb-flux-datasource, grafana-influxdb-flux-datasource, farski-blendstat-panel, mtanda-histogram-panel, vonage-status-panel
+      - GF_USERS_DEFAULT_THEME=light
 volumes:
   influxdb-storage:
