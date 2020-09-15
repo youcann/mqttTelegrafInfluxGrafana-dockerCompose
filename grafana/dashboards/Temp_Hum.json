@@ -221,11 +221,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "InfluxDB",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
-          "links": []
+          "custom": {}
         },
         "overrides": []
       },
@@ -252,7 +251,7 @@
       "linewidth": 2,
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.5",
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -262,6 +261,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "Temperatur",
           "groupBy": [
             {
               "params": [
@@ -295,7 +295,7 @@
               },
               {
                 "params": [
-                  "5"
+                  10
                 ],
                 "type": "moving_average"
               }
@@ -324,6 +324,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:519",
           "format": "celsius",
           "label": null,
           "logBase": 1,
@@ -332,6 +333,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:520",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -352,11 +354,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "InfluxDB",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
-          "links": []
+          "custom": {}
         },
         "overrides": []
       },
@@ -383,7 +384,7 @@
       "linewidth": 2,
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.5",
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -393,6 +394,7 @@
       "steppedLine": false,
       "targets": [
         {
+          "alias": "Luftfeuchte",
           "groupBy": [
             {
               "params": [
@@ -426,7 +428,7 @@
               },
               {
                 "params": [
-                  "5"
+                  10
                 ],
                 "type": "moving_average"
               }
@@ -455,6 +457,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:609",
           "format": "humidity",
           "label": null,
           "logBase": 1,
@@ -463,6 +466,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:610",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -485,11 +489,10 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "InfluxDB",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
-          "links": []
+          "custom": {}
         },
         "overrides": []
       },
@@ -516,7 +519,7 @@
       "linewidth": 2,
       "nullPointMode": "null",
       "percentage": false,
-      "pluginVersion": "7.1.5",
+      "pluginVersion": "7.1.3",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -535,7 +538,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "",
+          "alias": "Temperatur",
           "groupBy": [
             {
               "params": [
@@ -559,7 +562,7 @@
             [
               {
                 "params": [
-                  "humidity"
+                  "temperature"
                 ],
                 "type": "field"
               },
@@ -569,21 +572,16 @@
               },
               {
                 "params": [
-                  "5"
+                  10
                 ],
                 "type": "moving_average"
-              },
-              {
-                "params": [
-                  "Luftfeuchte"
-                ],
-                "type": "alias"
               }
             ]
           ],
           "tags": []
         },
         {
+          "alias": "Luftfeuchte",
           "groupBy": [
             {
               "params": [
@@ -607,7 +605,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "humidity"
                 ],
                 "type": "field"
               },
@@ -617,15 +615,9 @@
               },
               {
                 "params": [
-                  "5"
+                  10
                 ],
                 "type": "moving_average"
-              },
-              {
-                "params": [
-                  "Temperatur"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -652,6 +644,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:702",
           "format": "humidity",
           "label": null,
           "logBase": 1,
@@ -660,6 +653,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:703",
           "format": "celsius",
           "label": "",
           "logBase": 1,
@@ -702,5 +696,5 @@
   "timezone": "",
   "title": "Temperatur und Luftfeuchte",
   "uid": "iA3n2WzRk",
-  "version": 2
+  "version": 1
 }
