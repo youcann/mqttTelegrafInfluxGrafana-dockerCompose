@@ -18,7 +18,7 @@
   "links": [],
   "panels": [
     {
-      "content": "<img src=\"/public/images/kitLogo.png\"></img>\n\n<style>\n.panel-title-text {\n font-size: large;\n}\n</style>\n\n",
+      "content": "<img src=\"/public/img/kitLogo.png\"></img>\n\n<style>\n.panel-title-text {\n font-size: large;\n}\n</style>\n\n",
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -27,7 +27,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
+        "h": 4,
         "w": 3,
         "x": 0,
         "y": 0
@@ -35,7 +35,7 @@
       "id": 8,
       "mode": "html",
       "options": {
-        "content": "<img src=\"/public/images/kitLogo.png\"></img>\n\n\n",
+        "content": "<img src=\"/public/images/kitLogo.png\"></img>",
         "mode": "html"
       },
       "pluginVersion": "7.1.0",
@@ -67,8 +67,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 6,
+        "h": 2,
+        "w": 5,
         "x": 3,
         "y": 0
       },
@@ -78,7 +78,7 @@
         "bgColor": "rgba(255, 255, 255, 0)",
         "clockType": "24 hour",
         "countdownSettings": {
-          "endCountdownTime": "2020-09-16T00:30:13+02:00",
+          "endCountdownTime": "2020-09-28T23:11:30+02:00",
           "endText": "00:00:00"
         },
         "dateSettings": {
@@ -100,11 +100,18 @@
           "zoneFormat": "offsetAbbv"
         }
       },
+      "pluginVersion": "7.1.0",
       "refreshSettings": {
         "syncWithDashboard": false
       },
       "targets": [
         {
+          "$$hashKey": "object:1806",
+          "aggregation": "Last",
+          "decimals": 2,
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
           "groupBy": [
             {
               "params": [
@@ -137,7 +144,9 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [],
+          "units": "none",
+          "valueHandler": "Number Threshold"
         }
       ],
       "timeFrom": null,
@@ -170,7 +179,7 @@
       "gridPos": {
         "h": 2,
         "w": 7,
-        "x": 9,
+        "x": 8,
         "y": 0
       },
       "id": 12,
@@ -208,23 +217,23 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 6,
-        "x": 16,
+        "h": 2,
+        "w": 5,
+        "x": 15,
         "y": 0
       },
-      "id": 13,
+      "id": 16,
       "mode": "time",
       "options": {
         "bgColor": "rgba(255, 255, 255, 0)",
         "clockType": "24 hour",
         "countdownSettings": {
-          "endCountdownTime": "2020-09-16T00:30:13+02:00",
+          "endCountdownTime": "2020-09-28T23:11:30+02:00",
           "endText": "00:00:00"
         },
         "dateSettings": {
           "dateFormat": "DD.MM.YYYY",
-          "fontSize": "25px",
+          "fontSize": "15px",
           "fontWeight": "normal",
           "showDate": false
         },
@@ -241,11 +250,18 @@
           "zoneFormat": "offsetAbbv"
         }
       },
+      "pluginVersion": "7.1.0",
       "refreshSettings": {
         "syncWithDashboard": false
       },
       "targets": [
         {
+          "$$hashKey": "object:1806",
+          "aggregation": "Last",
+          "decimals": 2,
+          "displayAliasType": "Warning / Critical",
+          "displayType": "Regular",
+          "displayValueWithAlias": "Never",
           "groupBy": [
             {
               "params": [
@@ -278,7 +294,9 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [],
+          "units": "none",
+          "valueHandler": "Number Threshold"
         }
       ],
       "timeFrom": null,
@@ -300,7 +318,7 @@
       "type": "grafana-clock-panel"
     },
     {
-      "content": "<img src=\"/public/images/iehLogo.png\"></img>\n\n",
+      "content": "<img src=\"/public/img/iehLogo.png\"></img>\n\n",
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -317,7 +335,7 @@
       "id": 6,
       "mode": "html",
       "options": {
-        "content": "<img src=\"/public/images/iehLogo.png\"></img>\n\n",
+        "content": "<img src=\"/public/images/iehLogo.png\"></img>",
         "mode": "html"
       },
       "pluginVersion": "7.1.0",
@@ -337,7 +355,8 @@
       "datasource": "InfluxDB",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -365,22 +384,21 @@
       "nullPointMode": "null",
       "percentage": false,
       "pluginVersion": "7.1.3",
-      "pointradius": 2,
+      "pointradius": 1,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2111",
-          "alias": "Temperatur",
+          "$$hashKey": "object:1632",
+          "alias": "mqtt_consumer.moving_average",
           "color": "rgb(0, 150, 130)"
         }
       ],
       "spaceLength": 10,
       "stack": false,
-      "steppedLine": true,
+      "steppedLine": false,
       "targets": [
         {
-          "alias": "Temperatur",
           "groupBy": [
             {
               "params": [
@@ -404,7 +422,7 @@
             [
               {
                 "params": [
-                  "temperature"
+                  "windspeed"
                 ],
                 "type": "field"
               },
@@ -414,7 +432,7 @@
               },
               {
                 "params": [
-                  "10"
+                  10
                 ],
                 "type": "moving_average"
               }
@@ -433,7 +451,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Temperatur",
+      "title": "Windgeschwindigkeit",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -449,8 +467,8 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:184",
-          "format": "celsius",
+          "$$hashKey": "object:1592",
+          "format": "velocityms",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -458,7 +476,7 @@
           "show": true
         },
         {
-          "$$hashKey": "object:185",
+          "$$hashKey": "object:1593",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -474,6 +492,7 @@
     },
     {
       "aliasColors": {
+        "weather.mean": "rgb(70, 100, 170)",
         "weather.moving_average": "rgb(70, 100, 170)"
       },
       "bars": false,
@@ -482,7 +501,8 @@
       "datasource": "InfluxDB",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "links": []
         },
         "overrides": []
       },
@@ -495,7 +515,7 @@
         "y": 11
       },
       "hiddenSeries": false,
-      "id": 3,
+      "id": 15,
       "legend": {
         "avg": false,
         "current": false,
@@ -515,17 +535,16 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "$$hashKey": "object:2247",
-          "alias": "Luftfeuchte",
+          "$$hashKey": "object:1907",
+          "alias": "mqtt_consumer.moving_average",
           "color": "rgb(0, 150, 130)"
         }
       ],
       "spaceLength": 10,
       "stack": false,
-      "steppedLine": true,
+      "steppedLine": false,
       "targets": [
         {
-          "alias": "Luftfeuchte",
           "groupBy": [
             {
               "params": [
@@ -549,7 +568,7 @@
             [
               {
                 "params": [
-                  "humidity"
+                  "winddirection"
                 ],
                 "type": "field"
               },
@@ -578,7 +597,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Luftfeuchte",
+      "title": "Windrichtung",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -594,8 +613,8 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:306",
-          "format": "humidity",
+          "$$hashKey": "object:1713",
+          "format": "degree",
           "label": null,
           "logBase": 1,
           "max": null,
@@ -603,220 +622,13 @@
           "show": true
         },
         {
-          "$$hashKey": "object:307",
+          "$$hashKey": "object:1714",
           "format": "short",
           "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "weather.Luftfeuchte": "rgb(70, 100, 170)",
-        "weather.Temperatur": "rgb(0, 150, 130)",
-        "weather.moving_average": "rgb(0, 150, 130)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": "InfluxDB",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 3,
-      "fillGradient": 0,
-      "gridPos": {
-        "h": 9,
-        "w": 24,
-        "x": 0,
-        "y": 18
-      },
-      "hiddenSeries": false,
-      "id": 4,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 2,
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pluginVersion": "7.1.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "$$hashKey": "object:1004",
-          "alias": "Temperatur",
-          "yaxis": 1
-        },
-        {
-          "$$hashKey": "object:2424",
-          "alias": "Temperatur",
-          "color": "rgb(0, 150, 130)"
-        },
-        {
-          "$$hashKey": "object:2619",
-          "alias": "Luftfeuchte",
-          "color": "rgb(223, 157, 27)",
-          "yaxis": 2
-        }
-      ],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": true,
-      "targets": [
-        {
-          "alias": "Temperatur",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mqtt_consumer",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "temperature"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              },
-              {
-                "params": [
-                  10
-                ],
-                "type": "moving_average"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "topic",
-              "operator": "=",
-              "value": "sensors"
-            }
-          ]
-        },
-        {
-          "alias": "Luftfeuchte",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "mqtt_consumer",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "humidity"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              },
-              {
-                "params": [
-                  10
-                ],
-                "type": "moving_average"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "topic",
-              "operator": "=",
-              "value": "sensors"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "Temperatur & Luftfeuchte",
-      "tooltip": {
-        "shared": false,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "$$hashKey": "object:605",
-          "format": "celsius",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "$$hashKey": "object:606",
-          "format": "humidity",
-          "label": "",
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -834,7 +646,7 @@
   },
   "time": {
     "from": "now/d",
-    "to": "now"
+    "to": "now/d"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -851,7 +663,7 @@
     ]
   },
   "timezone": "",
-  "title": "Temperatur und Luftfeuchte",
-  "uid": "iA3n2WzRk",
+  "title": "Wind",
+  "uid": "T17cbWkgk",
   "version": 1
 }
