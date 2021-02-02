@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 7,
   "links": [],
   "panels": [
     {
@@ -75,7 +74,7 @@
       "targets": [
         {
           "groupBy": [],
-          "measurement": "log",
+          "measurement": "mqtt_consumer",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -113,7 +112,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -133,5 +132,5 @@
   "timezone": "",
   "title": "Logs",
   "uid": "SN26lu1Mz",
-  "version": 3
+  "version": 4
 }

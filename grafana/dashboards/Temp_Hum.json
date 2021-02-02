@@ -517,7 +517,7 @@
         {
           "$$hashKey": "object:2247",
           "alias": "Luftfeuchte",
-          "color": "rgb(0, 150, 130)"
+          "color": "rgb(223, 155, 27)"
         }
       ],
       "spaceLength": 10,
@@ -853,5 +853,5 @@
   "timezone": "",
   "title": "Temperatur und Luftfeuchte",
   "uid": "iA3n2WzRk",
-  "version": 1
+  "version": 2
 }
