@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   influxdb:
-    image: influxdb:latest
+    image: influxdb:1.8
     network_mode: "host"
     ports:
       - '8086:8086'
@@ -24,7 +24,7 @@ services:
       - "1883:1883"
       - "9001:9001"
   telegraf:
-    image: telegraf:latest
+    image: telegraf:1.20
     network_mode: "host"
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
