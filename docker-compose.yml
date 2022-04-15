@@ -14,7 +14,7 @@ services:
       - INFLUXDB_USER=telegraf-username
       - INFLUXDB_USER_PASSWORD=telegraf-password
   mosquitto:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:1.5
     network_mode: "host"
     hostname: mosquitto
     expose:
