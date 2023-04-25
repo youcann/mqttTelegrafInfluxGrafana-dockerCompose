@@ -1,6 +1,7 @@
 version: '3.4'
 services:
   influxdb:
+    restart: always
     image: influxdb:1.8
     network_mode: "host"
     ports:
@@ -14,6 +15,7 @@ services:
       - INFLUXDB_USER=telegraf-username
       - INFLUXDB_USER_PASSWORD=telegraf-password
   mosquitto:
+    restart: always
     image: eclipse-mosquitto:1.5
     network_mode: "host"
     hostname: mosquitto
@@ -24,12 +26,14 @@ services:
       - "1883:1883"
       - "9001:9001"
   telegraf:
+    restart: always
     image: telegraf:1.20
     network_mode: "host"
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
       
   grafana:
+    restart: always
     image: grafana/grafana
     network_mode: "host"
     volumes:
